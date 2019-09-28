@@ -1,0 +1,44 @@
+body{
+  background-image: url(github-universe.jpg);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: darkgrey;
+  vertical-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+p{
+  color: white;
+}
+
+h1{
+  color: darkred;
+}
+
+h2{
+  color: darkred;
+}
+
+h2.favourite{
+  color: white;
+}
+
+a{
+  background-color: darkgrey;
+  color: red;
+}
+
+a:hover{
+  background-color: red;
+  color: darkgrey;
+  font-weight: bold;
+}
+
+img{
+  border-width: medium;
+  border-style: solid;
+}

@@ -1,0 +1,9 @@
+p{
+  border-width: 3px;
+}
+
+table{
+  border-width: 3px;
+  border-style: solid;
+  border-color: "black";
+}

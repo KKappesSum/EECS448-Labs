@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="AlterText.js"></script>
+    <link href="Text.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Change the Webpage and Border Colours</h1>
+    <p>Input RBG values in 0-255 form to change the given text.</p>
+    <h3>Background Colour:</h3>
+    R:
+    <input type="number" name="red1" value="0">
+    B:
+    <input type="number" name="blue1" value="0">
+    G:
+    <input type="number" name="green1" value="0">
+    <h3>Border</h3>
+    R:
+    <input type="number" name="red2" value="0">
+    B:
+    <input type="number" name="blue2" value="0">
+    G:
+    <input type="number" name="green2" value="0">
+    <button onclick="updateText()">Change Text Look</button>
+    <h3>A bunch of text</h3>
+    <table id="table">
+      <tr>
+        <td name="cell">
+          <p id="paragraph">This is a test paragraph full of test paragraph content. Specfically a
+            <br>lot of it.This is a test paragraph full of test paragraph content.
+            <br>Specfically a lot of it.This is a test paragraph full of test paragraph
+            <br>content. Specfically a lot of it.This is a test paragraph full of test
+            <br>paragraph content. Specfically a lot of it. This is a test paragraph full
+            <br>of test paragraph content. Specfically a lot of it.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
