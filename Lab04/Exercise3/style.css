@@ -1,0 +1,52 @@
+table, th, td{
+  padding: 3px;
+  color: brown;
+  background: beige;
+}
+
+p{
+  color: crimson;
+}
+
+h1{
+  text-align: center;
+  font-size: 32pt;
+  font-weight: bold;
+  color: firebrick;
+}
+
+h2{
+  color: firebrick;
+  font-weight: bold;
+}
+
+h2.password{
+  text-align: center;
+}
+
+h3{
+  color: firebrick;
+  font-weight: bold;
+}
+
+body{
+  background-color: #FFFFCC;
+}
+
+#shipping td, #items td{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#shipping table, #items table{
+  border: 3px solid black;
+}
+
+table.receipt{
+  border: 2px solid black;
+}
+
+#receipt td{
+  text-align: center;
+  background-color: navajowhite;
+  border-color: navajowhite;
+}

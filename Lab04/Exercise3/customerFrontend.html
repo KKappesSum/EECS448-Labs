@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="formChecker.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Food --To-> You</h1>
+  <form action="customerBackend.php" method="post">
+    <div id="signIn">
+      <h2>Sign In </h2>
+      <p>Enter your Username(email):</p>
+      <input type="text" name="email"><br>
+      <p>Enter Your Password:</p>
+      <input type="text" name="password"><br>
+      <button type="button" name="signInButton" onclick="validatePass()">Sign In</button>
+    </div>
+    <div id="items" style="display: none;">
+      <h2>Choose a Tasty Option:</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Taco</td>
+          <td>$1.25</td>
+          <td><button type="button" name="subTacos" onclick="subtract('numTacos', 'tacos')">-</button></td>
+          <td><span id="numTacos" value="0">0</span></td>
+          <td><button type="button" name="addTacos" onclick="add('numTacos', 'tacos')">+</button></td>
+        </tr>
+        <tr>
+          <td>Burrito</td>
+          <td>$3.50</td>
+          <td><button type="button" name="subBurritos" onclick="subtract('numBurritos', 'burritos')">-</button></td>
+          <td><span id="numBurritos" value="0">0</span></td>
+          <td><button type="button" name="addBurritos" onclick="add('numBurritos', 'burritos')">+</button></td>
+        </tr>
+        <tr>
+          <td>Enchilada</td>
+          <td>$5.00</td>
+          <td><button type="button" name="subEnchiladas" onclick="subtract('numEnchiladas', 'enchiladas')">-</button></td>
+          <td><span id="numEnchiladas" value="0">0</span></td>
+          <td><button type="button" name="addEnchiladas" onclick="add('numEnchiladas', 'enchiladas')">+</button></td>
+        </tr>
+        <input type="text" name="tacos" style="display:none" value="0">
+        <input type="text" name="burritos" style="display:none" value="0">
+        <input type="text" name="enchiladas" style="display:none" value="0">
+      </table>
+    </div>
+    <div id="shipping" style="display: none;">
+      <h2>Delivery Options:</h2>
+      <table>
+        <tr>
+          <th>Option</th>
+          <th></th>
+          <th>Price</th>
+          <th>Delivery Method</th>
+        </tr>
+        <tr>
+          <td>Free 7 Days</td>
+          <td><input type="radio" name="shippingOption" id="7Day" value="Free 7 Days" checked></td>
+          <td>Free!</td>
+          <td>We send our fastest delivery snail</td>
+        </tr>
+        <tr>
+          <td style="font: bold;">3 Day</td>
+          <td><input type="radio" name="shippingOption" id="3Day" value="3 Days"></td>
+          <td>$5.00</td>
+          <td>We deliver it via rocket</td>
+        </tr>
+        <tr>
+          <td style="font: bold;">Overnight</td>
+          <td><input type="radio" name="shippingOption" id="Overnight" value="Overnight"></td>
+          <td>$50.00</td>
+          <td>We send it through our teleporter</td>
+        </tr>
+      </table>
+      <br>
+      <button type="button" name="reset" disabled="true" onclick="resetForm()">Reset</button>
+      <button name="submit" disabled="true">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
