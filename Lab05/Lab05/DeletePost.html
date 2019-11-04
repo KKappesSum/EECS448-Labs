@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="DeletePost.php"></script>
+</head>
+<body>
+    <form action="DeletePost.php" method="post">
+        <h2>Delete Posts</h2>
+        <table border='1 solid black'>
+            <tr>
+                <th border='1 solid black'>Author</th>
+                <th border='1 solid black'>Post Content</th>
+                <th border='1 solid black'>Delete?</th>
+            </tr>
+            <?php
+                $mysqli = new mysqli("mysql.eecs.ku.edu", "kylekappessum", "aiMoh4yu", "kylekappessum");
+                $query = 0;
+
+                if($mysqli->connect_errno){
+                    echo "<h2>Bad Connection to SQL</h2>";
+                    exit();
+                }
+
+                $query= "SELECT Posts.content, Posts.post_id, Users.user_id from Posts inner join Users on Posts.author_id=Users.user_id order by Users.user_id ";
+                $result = $mysqli->query($query);
+                while($cur = $result->fetch_assoc()){
+                    echo "<tr><td border='1 solid black'>";
+                    echo $cur["user_id"];
+                    echo "</td><td border='1 solid black'>";
+                    echo "$cur[content]";
+                    echo "</td><td border='1 solid black'>";
+                    echo "<input type='checkbox' name='posts[]' value='$cur[post_id]'>";
+                    echo"</td></tr>";
+                }
+            ?>
+        </table>
+        <button id="submit" name="submit">Submit</button>
+    </form>
+</body>
+</html>
