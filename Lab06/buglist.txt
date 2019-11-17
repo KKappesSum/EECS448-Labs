@@ -1,0 +1,7 @@
+Bug List for Queue
+    1.) Enqueue does not add to the back of the queue. Based on the battery of tests
+it seems to add to the front instead.
+    2.) The destructor does not remove any items in the queue causing memory
+leaks. As part of this each node does not delete any content attached to it on
+its own, this isn't necessarily bad unless the queue depended on the node doing
+so.
